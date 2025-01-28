@@ -112,10 +112,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // in the middle of the parent.
         child: Container(
           color: Colors.blue,
-          height: double.infinity,
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-          // mainAxisSize: MainAxisSize.min,
+            mainAxisSize: MainAxisSize.min,
           children: [
             Container(
               height: 100.0,
@@ -123,6 +121,9 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
                 color: Colors.red,
+              ),
+              child: Center(
+                child: Text('data'),
               ),
             ),
             Container(
