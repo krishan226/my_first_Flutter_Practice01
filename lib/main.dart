@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.deepPurple,
-            brightness: Brightness.dark),
+            brightness: Brightness.light),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -111,23 +111,31 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Container(
-          height: double.infinity, width: double.infinity,
-          margin: EdgeInsets.all(50),
-          padding: EdgeInsets.all(50),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25.0),
-            color: Colors.red
-          ),
-          child: Container(
-              height: double.infinity, width: double.infinity,
-              padding: EdgeInsets.all(50),
+          color: Colors.blue,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          // mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              height: 100.0,
+              width: 100.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25.0),
+                color: Colors.red,
+              ),
+            ),
+            Container(
+              height: 100.0,
+              width: 100.0,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
                   color: Colors.yellow
               ),
-            child: Text('Hello', style: TextStyle(color: Colors.black)),
-          ),
-        )
+            )
+          ],
+        ),
+        ),
+
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
