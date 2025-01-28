@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Image.network('https://papers.co/wallpaper/papers.co-we14-pattern-background-apple-iphone12-rainbow-36-3840x2400-4k-wallpaper.jpg',
+      body: Image.asset('assets/images/bg.jpg',
           height: double.infinity,
         fit: BoxFit.cover,
       ),
