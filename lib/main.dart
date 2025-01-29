@@ -26,12 +26,26 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter App'),
           centerTitle: true,
         ),
+        drawer: Drawer(
+          child: Column(
+            children: [
+              DrawerHeader(
+                child: Text('Menu'),
+              ),
+              ListTile(
+                leading: Icon(Icons.login),
+                title: Text('Logout'),
+                onTap: () {},
+              ),
+            ],
+          ),
+        ),
         floatingActionButton: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             FloatingActionButton(
               onPressed: () {
-                print("Hello!");
+                print("Hello! 1");
               },
               child: Icon(Icons.add),
             ),
@@ -40,7 +54,7 @@ class MyApp extends StatelessWidget {
             ),
             FloatingActionButton(
               onPressed: () {
-                print("Hello!");
+                print("Hello! 2");
               },
               child: Icon(Icons.add),
             ),
