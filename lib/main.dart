@@ -111,17 +111,23 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.all(50.0),
         child: Stack(
           children: [
-            Image.asset(
-              'assets/images/bg.jpg',
-              fit: BoxFit.cover,
-            ),
             SizedBox(
               height: 300,
-              child: Center(child: Text('Fluuter Developement start')),
+              child: Center(child: Text('Flutter Developement start')),
             ),
+            ListTile(
+              leading: Icon(
+                Icons.join_full,
+              ),
+              tileColor: Colors.red,
+              title: Text('kjandkjnjkads'),
+              trailing: Text("asdasdasd"),
+              onTap: () {
+                print('click on the listTile');
+              },
+            )
           ],
         ),
       ),
