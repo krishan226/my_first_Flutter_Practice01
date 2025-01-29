@@ -37,6 +37,11 @@ class MyApp extends StatelessWidget {
                 title: Text('Logout'),
                 onTap: () {},
               ),
+              ListTile(
+                leading: Icon(Icons.verified_user),
+                title: Text('user'),
+                onTap: () {},
+              ),
             ],
           ),
         ),
