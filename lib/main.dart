@@ -26,11 +26,25 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter App'),
           centerTitle: true,
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print("Hello!");
-          },
-          child: Icon(Icons.add),
+        floatingActionButton: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            FloatingActionButton(
+              onPressed: () {
+                print("Hello!");
+              },
+              child: Icon(Icons.add),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                print("Hello!");
+              },
+              child: Icon(Icons.add),
+            ),
+          ],
         ),
         bottomNavigationBar: NavigationBar(
           destinations: [
