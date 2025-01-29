@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
             seedColor: Colors.deepPurple, brightness: Brightness.dark),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Demo AppBar'),
     );
   }
 }
@@ -105,6 +105,10 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        leading: Icon(
+          Icons.notification_add,
+          color: Colors.amber,
+        ),
       ),
       body: Container(
         padding: EdgeInsets.all(50.0),
