@@ -21,65 +21,47 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter App'),
-          centerTitle: true,
-        ),
-        drawer: Drawer(
-          child: Column(
-            children: [
-              DrawerHeader(
-                child: Text('Menu'),
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text('Flutter App'),
+            centerTitle: true,
+          ),
+          drawer: Drawer(
+            child: Column(
+              children: [
+                DrawerHeader(
+                  child: Text('Menu'),
+                ),
+                ListTile(
+                  leading: Icon(Icons.login),
+                  title: Text('Logout'),
+                  onTap: () {},
+                ),
+                ListTile(
+                  leading: Icon(Icons.verified_user),
+                  title: Text('user'),
+                  onTap: () {},
+                ),
+              ],
+            ),
+          ),
+          bottomNavigationBar: NavigationBar(
+            destinations: [
+              NavigationDestination(
+                icon: Icon(Icons.home),
+                label: 'Home',
               ),
-              ListTile(
-                leading: Icon(Icons.login),
-                title: Text('Logout'),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.verified_user),
-                title: Text('user'),
-                onTap: () {},
+              NavigationDestination(
+                icon: Icon(Icons.person),
+                label: 'Home',
               ),
             ],
+            onDestinationSelected: (int value) {
+              print('Selected destination: $value');
+            },
+            selectedIndex: 0,
           ),
-        ),
-        floatingActionButton: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            FloatingActionButton(
-              onPressed: () {
-                print("Hello! 1");
-              },
-              child: Icon(Icons.add),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            FloatingActionButton(
-              onPressed: () {
-                print("Hello! 2");
-              },
-              child: Icon(Icons.add),
-            ),
-          ],
-        ),
-        bottomNavigationBar: NavigationBar(
-          destinations: [
-            NavigationDestination(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.person),
-              label: 'Home',
-            ),
-          ],
-          onDestinationSelected: (int value) {
-            print('Selected destination: $value');
-          },
-          selectedIndex: 0,
         ),
       ),
     );
