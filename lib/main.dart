@@ -25,14 +25,22 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter App'),
           centerTitle: true,
-          leading: Icon(Icons.login),
-          actions: [
-            Icon(Icons.search),
-            Icon(Icons.notifications),
-            Icon(Icons.more_vert),
-            Text('Click')
+        ),
+        bottomNavigationBar: NavigationBar(
+          destinations: [
+            NavigationDestination(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.person),
+              label: 'Home',
+            ),
           ],
-          backgroundColor: Colors.teal,
+          onDestinationSelected: (int value) {
+            print('Selected destination: $value');
+          },
+          selectedIndex: 0,
         ),
       ),
     );
