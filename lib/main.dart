@@ -21,7 +21,20 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter App'),
+          centerTitle: true,
+          leading: Icon(Icons.login),
+          actions: [
+            Icon(Icons.search),
+            Icon(Icons.notifications),
+            Icon(Icons.more_vert),
+            Text('Click')
+          ],
+          backgroundColor: Colors.teal,
+        ),
+      ),
     );
   }
 }
