@@ -4,9 +4,7 @@ void main() {
   runApp(const MyApp());
 }
 
-// StatelessWidget
-// Material App
-// Scaffold
+String? title;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,7 +22,7 @@ class MyApp extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Flutter App'),
+            title: Text(title ?? 'Krishan'),
             centerTitle: true,
           ),
           drawer: Drawer(
@@ -35,7 +33,7 @@ class MyApp extends StatelessWidget {
                 ),
                 ListTile(
                   leading: Icon(Icons.login),
-                  title: Text('Logout'),
+                  title: Text('Logout User'),
                   onTap: () {},
                 ),
                 ListTile(
