@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter/Widgets/navbar_widget.dart';
+import 'package:my_first_flutter/views/widget_tree.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
-// ------  Start New Application
-// StatefulWidget
-// Material App (StateFull)
-// Scaffold
-// Nav Bar -- with title
-//BottomNavigationbar
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -27,17 +20,10 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.teal,
-          brightness: Brightness.light,
+          brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'My App',
-          ),
-        ),
-        bottomNavigationBar: MyNavbarWidget(),
-      ),
+      home: WidgetTree(),
     );
   }
 }
