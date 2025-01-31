@@ -24,6 +24,21 @@ class _WidgetTreeState extends State<WidgetTree> {
         title: Text(
           'My App',
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              isDarkModeNotifier.value = !isDarkModeNotifier.value;
+            },
+            icon: ValueListenableBuilder(
+              valueListenable: isDarkModeNotifier,
+              builder: (context, isDark, child) {
+                return Icon(
+                  isDark ? Icons.light_mode : Icons.dark_mode,
+                );
+              },
+            ),
+          )
+        ],
       ),
       body: ValueListenableBuilder(
         valueListenable: selectedPageNotifier,
