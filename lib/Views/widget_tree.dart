@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/Views/Pages/homePage.dart';
 import 'package:my_first_flutter/Views/Pages/profilePage.dart';
-import '../Widgets/navbar_widget.dart';
+import '../Views/Widgets/navbar_widget.dart';
 
 List<Widget> pages = [
   HomePage(),
@@ -24,7 +24,7 @@ class _WidgetTreeState extends State<WidgetTree> {
           'My App',
         ),
       ),
-      body: pages.elementAt(0),
+      body: pages.elementAt(1),
       bottomNavigationBar: MyNavbarWidget(),
     );
   }
