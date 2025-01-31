@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/Views/Pages/homePage.dart';
-import 'package:my_first_flutter/Views/Pages/profilePage.dart';
+import 'package:my_first_flutter/Views/Pages/profile_page.dart';
+import 'package:my_first_flutter/Views/Pages/settings_page.dart';
 import 'package:my_first_flutter/data/notifiers.dart';
 import '../Views/Widgets/navbar_widget.dart';
 
@@ -37,6 +38,19 @@ class _WidgetTreeState extends State<WidgetTree> {
                 );
               },
             ),
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SettingsPage();
+                  },
+                ),
+              );
+            },
+            icon: Icon(Icons.settings),
           )
         ],
       ),
