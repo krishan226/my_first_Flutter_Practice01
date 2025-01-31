@@ -97,6 +97,20 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               child: Text('Submit'),
             ),
+            FilledButton(
+              onPressed: () {},
+              child: Text('Submit'),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text('Submit'),
+            ),
+            OutlinedButton(
+              onPressed: () {},
+              child: Text('Submit'),
+            ),
+            CloseButton(),
+            BackButton(),
           ],
         ),
       ),
