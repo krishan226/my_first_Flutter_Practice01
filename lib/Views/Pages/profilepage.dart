@@ -24,7 +24,9 @@ class _ProfilePageState extends State<ProfilePage> {
               border: OutlineInputBorder(),
             ),
             onEditingComplete: () {
-              setState(() {});
+              setState(() {
+                print('Do Som');
+              });
             },
           ),
           Text(controller.text),
