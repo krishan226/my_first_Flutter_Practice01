@@ -81,13 +81,21 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             InkWell(
               child: Container(
-                height: 200,
+                height: 50,
                 width: double.infinity,
                 color: Colors.white12,
               ),
               onTap: () {
                 print('Image Tapped');
               },
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal,
+                foregroundColor: Colors.white,
+              ),
+              child: Text('Submit'),
             ),
           ],
         ),
