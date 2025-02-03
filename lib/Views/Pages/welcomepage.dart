@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter/Views/Widgets/hero_widget.dart';
+import 'package:lottie/lottie.dart';
+// import 'package:my_first_flutter/Views/Widgets/hero_widget.dart';
 import 'package:my_first_flutter/views/widget_tree.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -13,7 +14,15 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            HeroWidget(),
+            // HeroWidget(),
+            Lottie.asset('assets/lotties/mobilephone.json'),
+            Text(
+              'Flutter application',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15.0,
+                  letterSpacing: 0.0),
+            ),
             FilledButton(
               onPressed: () {
                 Navigator.pushReplacement(
