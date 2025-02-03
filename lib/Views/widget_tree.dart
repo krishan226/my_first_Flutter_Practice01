@@ -45,7 +45,9 @@ class _WidgetTreeState extends State<WidgetTree> {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return SettingsPage();
+                    return SettingsPage(
+                      title: 'Settings qwerty',
+                    );
                   },
                 ),
               );
