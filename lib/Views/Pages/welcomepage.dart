@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:my_first_flutter/Views/Pages/loginpage.dart';
 // import 'package:my_first_flutter/Views/Widgets/hero_widget.dart';
 import 'package:my_first_flutter/views/widget_tree.dart';
 
@@ -31,7 +32,7 @@ class WelcomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return WidgetTree();
+                      return LoginPage();
                     },
                   ),
                 );
