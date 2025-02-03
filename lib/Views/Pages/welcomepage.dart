@@ -21,8 +21,8 @@ class WelcomePage extends StatelessWidget {
                 'Flutter application',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 50.0,
-                    letterSpacing: 100.0),
+                    fontSize: 25.0,
+                    letterSpacing: 5.0),
               ),
             ),
             FilledButton(
