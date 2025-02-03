@@ -16,12 +16,14 @@ class WelcomePage extends StatelessWidget {
           children: [
             // HeroWidget(),
             Lottie.asset('assets/lotties/mobilephone.json'),
-            Text(
-              'Flutter application',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 50.0,
-                  letterSpacing: 100.0),
+            FittedBox(
+              child: Text(
+                'Flutter application',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 50.0,
+                    letterSpacing: 100.0),
+              ),
             ),
             FilledButton(
               onPressed: () {
