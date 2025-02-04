@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/Views/Widgets/hero_widget.dart';
+import 'package:my_first_flutter/Views/widget_tree.dart';
 
 TextEditingController controller = TextEditingController();
 
@@ -11,14 +12,13 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  @override
-  void initState() {
-    super.initState();
-  }
+  TextEditingController controllerEmail = TextEditingController();
+  TextEditingController controllerPassword = TextEditingController();
 
   @override
   void dispose() {
-    controller.dispose();
+    controllerEmail.dispose();
+    controllerPassword.dispose();
     super.dispose();
   }
 
@@ -33,18 +33,61 @@ class _LoginPageState extends State<LoginPage> {
             HeroWidget(
               title: 'Login',
             ),
+            SizedBox(
+              height: 20,
+            ),
             TextField(
-              controller: controller,
+              controller: controllerEmail,
               decoration: InputDecoration(
-                labelText: 'Enter Name',
-                border: OutlineInputBorder(),
+                hintText: 'Email',
+                labelText: 'Email',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
               onEditingComplete: () {
                 setState(() {
-                  print('Do Som');
+                  print('Do Something...');
                 });
               },
-            )
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            TextField(
+              controller: controllerPassword,
+              decoration: InputDecoration(
+                hintText: 'Password',
+                labelText: 'Password',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              onEditingComplete: () {
+                setState(() {
+                  print('Do Something...');
+                });
+              },
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return WidgetTree();
+                    },
+                  ),
+                );
+              },
+              style: FilledButton.styleFrom(
+                minimumSize: Size(double.infinity, 50.0),
+              ),
+              child: Text('Login'),
+            ),
           ],
         ),
       ),
