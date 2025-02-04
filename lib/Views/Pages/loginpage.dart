@@ -14,6 +14,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController controllerEmail = TextEditingController();
   TextEditingController controllerPassword = TextEditingController();
+  String validEmail = '123';
+  String validPassword = '456';
 
   @override
   void dispose() {
@@ -72,18 +74,11 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 10,
             ),
-            FilledButton(
+            ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return WidgetTree();
-                    },
-                  ),
-                );
+                onLoginPress();
               },
-              style: FilledButton.styleFrom(
+              style: ElevatedButton.styleFrom(
                 minimumSize: Size(double.infinity, 50.0),
               ),
               child: Text('Login'),
@@ -92,5 +87,22 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  void onLoginPress() {
+    if (controllerEmail.text == validEmail &&
+        controllerPassword.text == validPassword) {
+      print('Login Successful');
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return WidgetTree();
+          },
+        ),
+      );
+    } else {
+      print('Invalid credentials');
+    }
   }
 }
