@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/Views/Pages/navigationstack1.dart';
 import 'package:my_first_flutter/Views/Widgets/hero_widget.dart';
 import 'package:my_first_flutter/Views/widget_tree.dart';
 
@@ -117,6 +118,14 @@ class _LoginPageState extends State<LoginPage> {
       );
     } else {
       print('Invalid credentials');
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return NavigationStack1();
+          },
+        ),
+      );
     }
   }
 }
