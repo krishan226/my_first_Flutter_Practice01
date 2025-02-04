@@ -28,62 +28,70 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-            HeroWidget(
-              title: 'Login',
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            TextField(
-              controller: controllerEmail,
-              decoration: InputDecoration(
-                hintText: 'Email',
-                labelText: 'Email',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                HeroWidget(
+                  title: 'Login',
                 ),
-              ),
-              onEditingComplete: () {
-                setState(() {
-                  print('Do Something...');
-                });
-              },
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextField(
-              controller: controllerPassword,
-              decoration: InputDecoration(
-                hintText: 'Password',
-                labelText: 'Password',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
+                SizedBox(
+                  height: 20,
                 ),
-              ),
-              onEditingComplete: () {
-                setState(() {
-                  print('Do Something...');
-                });
-              },
+                TextField(
+                  controller: controllerEmail,
+                  decoration: InputDecoration(
+                    hintText: 'Email',
+                    labelText: 'Email',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  onEditingComplete: () {
+                    setState(() {
+                      print('Do Something...');
+                    });
+                  },
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextField(
+                  controller: controllerPassword,
+                  decoration: InputDecoration(
+                    hintText: 'Password',
+                    labelText: 'Password',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  onEditingComplete: () {
+                    setState(() {
+                      print('Do Something...');
+                    });
+                  },
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                FilledButton(
+                  onPressed: () {
+                    onLoginPress();
+                  },
+                  style: FilledButton.styleFrom(
+                    minimumSize: Size(200, 50.0),
+                  ),
+                  child: Text('Login'),
+                ),
+                SizedBox(
+                  height: 50.0,
+                ),
+              ],
             ),
-            SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                onLoginPress();
-              },
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(double.infinity, 50.0),
-              ),
-              child: Text('Login'),
-            ),
-          ],
+          ),
         ),
       ),
     );
