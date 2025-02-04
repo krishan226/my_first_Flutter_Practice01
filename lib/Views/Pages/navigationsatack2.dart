@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/Views/Pages/welcomepage.dart';
-import 'package:my_first_flutter/Views/widget_tree.dart';
 
 class NavigationStack2 extends StatelessWidget {
   const NavigationStack2({super.key});
