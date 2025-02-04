@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/Views/Pages/welcomepage.dart';
+import 'package:my_first_flutter/Views/widget_tree.dart';
 
 class NavigationStack2 extends StatelessWidget {
   const NavigationStack2({super.key});
@@ -14,7 +16,11 @@ class NavigationStack2 extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(
+            builder: (context) {
+              return WelcomePage();
+            },
+          ), (route) => false);
         },
         child: Icon(Icons.arrow_back),
       ),
