@@ -5,7 +5,13 @@ import 'package:my_first_flutter/Views/widget_tree.dart';
 TextEditingController controller = TextEditingController();
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  const LoginPage({
+    super.key,
+    required this.title,
+  });
+
+//MARK:  Variables
+  final String title;
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -36,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 HeroWidget(
-                  title: 'Login',
+                  title: widget.title,
                 ),
                 SizedBox(
                   height: 20,
@@ -84,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: FilledButton.styleFrom(
                     minimumSize: Size(200, 50.0),
                   ),
-                  child: Text('Login'),
+                  child: Text(widget.title),
                 ),
                 SizedBox(
                   height: 50.0,
