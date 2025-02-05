@@ -16,3 +16,10 @@ class KTextStyle {
 class KConstants {
   static const String isDarkModeKey = 'isDarkModeKey';
 }
+
+class KValuesOfCard {
+  static const String keyConcepts = 'Key Concepts';
+  static const String cleanUi = 'Clean UI';
+  static const String fixedBugs = 'Fixed Bugs';
+  static const String basicLayout = 'Basic Layout';
+}
