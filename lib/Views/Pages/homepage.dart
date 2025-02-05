@@ -15,16 +15,14 @@ class HomePage extends StatelessWidget {
             HeroWidget(
               title: 'Login',
             ),
-            Column(
-              children: List.generate(
-                2,
-                (index) {
-                  return CardContainerWidgets(
-                    title: 'Welcome to my First Card in Flutter App !',
-                    description: 'This is a simple card widget',
-                  );
-                },
-              ),
+            ...List.generate(
+              2,
+              (index) {
+                return CardContainerWidgets(
+                  title: 'Title',
+                  description: 'Description',
+                );
+              },
             )
           ],
         ),
