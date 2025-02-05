@@ -12,3 +12,7 @@ class KTextStyle {
     fontSize: 12.0,
   );
 }
+
+class KConstants {
+  static const String isDarkModeKey = 'isDarkModeKey';
+}

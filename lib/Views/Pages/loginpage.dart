@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:my_first_flutter/Views/Pages/navigationstack1.dart';
-import 'package:my_first_flutter/Views/Widgets/hero_widget.dart';
 import 'package:my_first_flutter/Views/widget_tree.dart';
 
 TextEditingController controller = TextEditingController();
@@ -42,12 +42,13 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                HeroWidget(
-                  title: widget.title,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
+                // HeroWidget(
+                //   title: widget.title,
+                // ),
+                // SizedBox(
+                //   height: 20,
+                // ),
+                Lottie.asset('assets/lotties/welcome.json', height: 400.0),
                 TextField(
                   controller: controllerEmail,
                   decoration: InputDecoration(

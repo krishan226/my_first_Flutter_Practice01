@@ -32,6 +32,9 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+.packages
+
+
 
 # Symbolication related
 app.*.symbols
@@ -43,3 +46,35 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
+
+# iOS-specific
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+
+
+
+# CocoaPods - Refactored to standalone file
+Pods/
+Podfile.lock
+
+
+# macOS-specific
+macos/.symlinks/
+macos/Flutter/ephemeral/
+
+# Windows-specific
+windows/flutter/ephemeral/
+
+# Linux-specific
+linux/flutter/ephemeral/
+
+# Web-specific
+web/.dart_tool/
+
+
