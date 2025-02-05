@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/Views/Pages/navigationstack1.dart';
 import 'package:my_first_flutter/Views/Widgets/card_containerwidget.dart';
 import 'package:my_first_flutter/Views/Widgets/hero_widget.dart';
 import 'package:my_first_flutter/data/constants.dart';
@@ -23,6 +24,7 @@ class HomePage extends StatelessWidget {
           children: [
             HeroWidget(
               title: 'Login',
+              nextPage: NavigationStack1(),
             ),
             ...List.generate(
               cardList.length,
