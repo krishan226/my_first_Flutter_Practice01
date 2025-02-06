@@ -42,13 +42,13 @@ class _NavigationStack1State extends State<NavigationStack1> {
       body: FutureBuilder(
         future: getData(),
         builder: (context, AsyncSnapshot snapshot) {
-          // Widget widget;
+          Widget widget;
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return CircularProgressIndicator();
+            widget = CircularProgressIndicator();
           }
           if (snapshot.hasData) {
             Activity activity = snapshot.data;
-            return Center(
+            widget = Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -69,10 +69,11 @@ class _NavigationStack1State extends State<NavigationStack1> {
               ),
             );
           } else {
-            return Center(
+            widget = Center(
               child: Text('error'),
             );
           }
+          return widget;
         },
       ),
     );
