@@ -23,7 +23,7 @@ class _NavigationStack1State extends State<NavigationStack1> {
     super.initState();
   }
 
-  void getData() async {
+  Future getData() async {
     var url = Uri.https('secrets-api.appbrewery.com', '/random');
 
     var response = await http.get(url);
@@ -48,25 +48,40 @@ class _NavigationStack1State extends State<NavigationStack1> {
       appBar: AppBar(
         title: Text('Navigation Stack 1'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return NavigationStack2();
+      body: FutureBuilder(
+        future: getData(),
+        builder: (context, AsyncSnapshot snapshot) {
+          // Widget widget;
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return CircularProgressIndicator();
+          }
+          if (snapshot.hasError) {
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return NavigationStack2();
+                          },
+                        ),
+                      );
                     },
+                    child: Text('Go to Navigation Stack 2'),
                   ),
-                );
-              },
-              child: Text('Go to Navigation Stack 2'),
-            ),
-          ],
-        ),
+                ],
+              ),
+            );
+          } else {
+            return Center(
+              child: Text('error'),
+            );
+          }
+        },
       ),
     );
   }
