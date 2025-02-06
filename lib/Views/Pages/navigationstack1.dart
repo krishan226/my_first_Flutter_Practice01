@@ -15,7 +15,6 @@ class NavigationStack1 extends StatefulWidget {
 
 class _NavigationStack1State extends State<NavigationStack1> {
 // Varibles
-  late Activity activity;
 
   @override
   void initState() {
@@ -25,18 +24,10 @@ class _NavigationStack1State extends State<NavigationStack1> {
 
   Future getData() async {
     var url = Uri.https('secrets-api.appbrewery.com', '/random');
-
     var response = await http.get(url);
-
     if (response.statusCode == 200) {
-      var jsonResponse =
-          convert.jsonDecode(response.body) as Map<String, dynamic>;
-      var secretValue = jsonResponse['secret'];
-      print(secretValue);
-      log(response.body);
-      activity = Activity.fromJson(
+      return Activity.fromJson(
           convert.jsonDecode(response.body) as Map<String, dynamic>);
-      print('Activity: ${activity.secret}');
     } else {
       print('Request failed with status: ${response.statusCode}.');
     }
@@ -55,7 +46,7 @@ class _NavigationStack1State extends State<NavigationStack1> {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return CircularProgressIndicator();
           }
-          if (snapshot.hasError) {
+          if (snapshot.hasData) {
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
