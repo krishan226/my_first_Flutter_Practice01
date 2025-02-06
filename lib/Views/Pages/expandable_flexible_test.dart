@@ -28,6 +28,26 @@ class ExpandedFlexibleTestPage extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          Divider(),
+          Row(
+            children: [
+              Flexible(
+                flex: 3,
+                child: Container(
+                  color: Colors.orange,
+                  height: 20.0,
+                  child: Text('Flexiables '),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  color: Colors.teal,
+                  height: 20.0,
+                  child: Text('Flexible'),
+                ),
+              ),
+            ],
           )
         ],
       ),
