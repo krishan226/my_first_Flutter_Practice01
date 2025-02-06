@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:my_first_flutter/Views/Pages/navigationsatack2.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
+import 'package:my_first_flutter/data/classes/activity_class.dart';
 
 class NavigationStack1 extends StatefulWidget {
   const NavigationStack1({super.key});
@@ -13,6 +14,9 @@ class NavigationStack1 extends StatefulWidget {
 }
 
 class _NavigationStack1State extends State<NavigationStack1> {
+// Varibles
+  late Activity activity;
+
   @override
   void initState() {
     getData();
@@ -30,6 +34,9 @@ class _NavigationStack1State extends State<NavigationStack1> {
       var secretValue = jsonResponse['secret'];
       print(secretValue);
       log(response.body);
+      activity = Activity.fromJson(
+          convert.jsonDecode(response.body) as Map<String, dynamic>);
+      print('Activity: ${activity.secret}');
     } else {
       print('Request failed with status: ${response.statusCode}.');
     }
