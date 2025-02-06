@@ -16,6 +16,12 @@ class ExpandedFlexibleTestPage extends StatelessWidget {
               color: Colors.teal,
             ),
           ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              color: Colors.blue,
+            ),
+          ),
         ],
       ),
     );
