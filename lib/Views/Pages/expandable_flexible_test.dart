@@ -24,7 +24,7 @@ class ExpandedFlexibleTestPage extends StatelessWidget {
                 child: Container(
                   color: Colors.orange,
                   height: 20.0,
-                  child: Text('Flexiables '),
+                  child: Text('Flexiables Buttons'),
                 ),
               ),
             ],
