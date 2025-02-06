@@ -11,17 +11,22 @@ class ExpandedFlexibleTestPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Expanded(
-            child: Container(
-              color: Colors.teal,
-            ),
-          ),
-          Expanded(
-            flex: 3,
-            child: Container(
-              color: Colors.blue,
-            ),
-          ),
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                  color: Colors.teal,
+                  height: 20.0,
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  color: Colors.yellow,
+                  height: 20.0,
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
