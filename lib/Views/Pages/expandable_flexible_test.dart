@@ -17,12 +17,14 @@ class ExpandedFlexibleTestPage extends StatelessWidget {
                 child: Container(
                   color: Colors.teal,
                   height: 20.0,
+                  child: Text('Flexible'),
                 ),
               ),
-              Expanded(
+              Flexible(
                 child: Container(
-                  color: Colors.yellow,
+                  color: Colors.orange,
                   height: 20.0,
+                  child: Text('Flexiables '),
                 ),
               ),
             ],
