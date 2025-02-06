@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/Views/Pages/navigationsatack2.dart';
 import 'dart:convert' as convert;
@@ -27,6 +29,7 @@ class _NavigationStack1State extends State<NavigationStack1> {
           convert.jsonDecode(response.body) as Map<String, dynamic>;
       var secretValue = jsonResponse['secret'];
       print(secretValue);
+      log(response.body);
     } else {
       print('Request failed with status: ${response.statusCode}.');
     }
