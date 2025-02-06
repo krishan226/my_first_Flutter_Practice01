@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/Views/Pages/expandable_flexible_test.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({
@@ -182,13 +183,34 @@ class _SettingsPageState extends State<SettingsPage> {
                   print('Image Tapped');
                 },
               ),
+
+              // Navigator.push(
+              //                 context,
+              //                 MaterialPageRoute(
+              //                   builder: (context) {
+              //                     return LoginPage(
+              //                       title: 'User Login',
+              //                     );
+              //                   },
+              //                 ),
+              //               );
+              //             }
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ExpandedFlexibleTestPage();
+                      },
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.teal,
                   foregroundColor: Colors.white,
                 ),
-                child: Text('Submit'),
+                child: Text('Show Flexible and Expanded'),
               ),
               FilledButton(
                 onPressed: () {},
