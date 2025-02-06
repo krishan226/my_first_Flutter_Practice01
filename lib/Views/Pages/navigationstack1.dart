@@ -47,6 +47,7 @@ class _NavigationStack1State extends State<NavigationStack1> {
             return CircularProgressIndicator();
           }
           if (snapshot.hasData) {
+            Activity activity = snapshot.data;
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -62,7 +63,7 @@ class _NavigationStack1State extends State<NavigationStack1> {
                         ),
                       );
                     },
-                    child: Text('Go to Navigation Stack 2'),
+                    child: Text(activity.secret.toString()),
                   ),
                 ],
               ),
