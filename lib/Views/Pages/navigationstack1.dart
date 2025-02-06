@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/Views/Pages/navigationsatack2.dart';
 
-class NavigationStack1 extends StatelessWidget {
+class NavigationStack1 extends StatefulWidget {
   const NavigationStack1({super.key});
 
+  @override
+  State<NavigationStack1> createState() => _NavigationStack1State();
+}
+
+class _NavigationStack1State extends State<NavigationStack1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
