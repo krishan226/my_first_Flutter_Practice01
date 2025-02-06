@@ -10,6 +10,11 @@ class NavigationStack1 extends StatefulWidget {
 
 class _NavigationStack1State extends State<NavigationStack1> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
