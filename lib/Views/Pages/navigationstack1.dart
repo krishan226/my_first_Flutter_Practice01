@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/Views/Pages/navigationsatack2.dart';
 import 'dart:convert' as convert;
